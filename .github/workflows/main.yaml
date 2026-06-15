@@ -29,7 +29,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         shell: sh
-        run: echo Hello, world! && pwd && ls && mkdir abcd && cd abcd && echo ${{github.run_attempt}} && pwd && echo ${{toJson(env)}} && echo ${{toJson(vars)}}
+        run: echo Hello, world! && pwd && ls && mkdir abcd && cd abcd && echo ${{github.run_attempt}} && pwd && echo ${{toJson(env)}} && echo ${{vars.ACTIONS_RUNNER_DEBUG}}
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
